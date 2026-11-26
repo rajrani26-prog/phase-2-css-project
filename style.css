@@ -1,0 +1,552 @@
+:root {
+    --navy: #14213d;
+    --navy-light: #243b63;
+    --gold: #d4af65;
+    --gold-light: #f4e8c8;
+    --cream: #f7f5ef;
+    --white: #ffffff;
+    --text: #273247;
+    --border: #e4e0d6;
+    --shadow: 0 8px 25px rgba(20, 33, 61, 0.09);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    background-color: var(--cream);
+    background-repeat: ;
+}
+
+h1, h2, h3 {
+    color: var(--navy);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+header {
+    background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--navy-light)
+    );
+
+    color: var(--white);
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 4px solid var(--gold);
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 32px;
+}
+
+header p {
+    color: var(--gold-light);
+    margin-bottom: 0;
+}
+
+
+nav {
+    background-color: var(--white);
+    padding: 12px 20px;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--gold-light);
+    color: var(--navy);
+}
+
+nav a:active {
+    background-color: var(--gold);
+}
+
+nav a:visited {
+    color: var(--navy);
+}
+
+/*main content*/
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.6s ease;
+}
+
+main h2:first-child {
+    margin-top: 0;
+}
+
+main h2 {
+    border-bottom: 2px solid var(--gold-light);
+    padding-bottom: 8px;
+}
+
+main ul,
+main ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+main li {
+    margin-bottom: 8px;
+}
+
+
+
+.home-page {
+    text-align: center;
+}
+
+.home-page h2 {
+    text-align: center;
+}
+
+.home-page p {
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+.home-page a {
+    color: var(--navy-light);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.home-page a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+
+
+
+.profile-page {
+    text-align: left;
+}
+
+.profile-img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--gold);
+    margin: 15px auto 30px;
+}
+
+.profile-page h2 {
+    margin-top: 25px;
+}
+
+.profile-page ul,
+.profile-page ol {
+    background-color: var(--cream);
+    padding: 20px 20px 20px 40px;
+    border-radius: 8px;
+}
+
+.profile-page p {
+    line-height: 1.8;
+}
+
+
+/*courses page*/
+
+.courses-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 22px;
+}
+
+.courses-page > h2,
+.courses-page > p {
+    flex: 0 0 100%;
+}
+
+.courses-page > h2 {
+    margin-bottom: 0;
+}
+
+.courses-page > p {
+    margin-bottom: 0;
+}
+
+.courses-page > section {
+    flex: 1 1 300px;
+
+    background-color: var(--cream);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.courses-page > section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.courses-page section h2,
+.courses-page section h3 {
+    margin-top: 0;
+    font-size: 19px;
+}
+
+.courses-page section ul {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+
+/*feedback form*/
+
+.feedback-page form {
+    max-width: 700px;
+    margin: 25px auto;
+}
+
+.feedback-page fieldset {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 22px;
+    background-color: var(--cream);
+}
+
+.feedback-page legend {
+    color: var(--navy);
+    font-weight: 700;
+    padding: 0 10px;
+}
+
+.feedback-page label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.feedback-page input:not([type="radio"]):not([type="checkbox"]),
+.feedback-page textarea,
+.feedback-page select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: var(--white);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.feedback-page input:focus,
+.feedback-page textarea:focus,
+.feedback-page select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 101, 0.2);
+}
+
+.feedback-page textarea {
+    resize: vertical;
+}
+
+.feedback-page input[type="radio"],
+.feedback-page input[type="checkbox"] {
+    margin-right: 7px;
+    accent-color: var(--navy);
+}
+
+.feedback-page input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.feedback-page label[for="subscribe"] {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.feedback-page button {
+    background-color: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+    margin: 8px 8px 0 0;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback-page button:hover {
+    background-color: var(--gold);
+    color: var(--navy);
+    transform: translateY(-2px);
+}
+
+.feedback-page button[type="reset"] {
+    background-color: var(--gold-light);
+    color: var(--navy);
+}
+
+
+/*grades table*/
+
+.grades-page {
+    overflow-x: auto;
+}
+
+.grades-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px auto;
+    box-shadow: var(--shadow);
+}
+
+.grades-page th,
+.grades-page td {
+    padding: 14px;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+.grades-page thead th {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.grades-page tbody tr:nth-child(even) {
+    background-color: var(--gold-light);
+}
+
+.grades-page tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+.grades-page tbody tr:hover {
+    background-color: var(--cream);
+}
+
+.grades-page tfoot {
+    background-color: var(--navy-light);
+    color: var(--white);
+}
+
+
+/*contact page*/
+
+.contact-page ul {
+    list-style: none;
+    padding: 20px;
+    background-color: var(--cream);
+    border-radius: 8px;
+}
+
+.contact-page li {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-page a {
+    color: var(--navy-light);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-page a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 22px 15px;
+    border-top: 4px solid var(--gold);
+    font-size: 14px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: var(--gold-light);
+    text-decoration: none;
+}
+
+
+/*animation*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*media query*/
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+
+    main {
+        width: 94%;
+        padding: 22px;
+        margin: 22px auto;
+    }
+    .courses-page > section {
+        flex-basis: 100%;
+    }
+}
+}
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    main h2 {
+        font-size: 21px;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .feedback-page fieldset {
+        padding: 14px;
+    }
+
+    .grades-page table {
+        min-width: 550px;
+    }
+
+    .grades-page th,
+    .grades-page td {
+        padding: 10px;
+    }
+}
